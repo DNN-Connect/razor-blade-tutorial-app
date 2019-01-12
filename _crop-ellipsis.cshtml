@@ -1,0 +1,85 @@
+@using Connect.Razor.Blade;
+<h1>Razor Blade Crop and Ellipsis</h1>
+<div>
+    These demos show how to crop text properly, because Razor Blade handles a lot of issues you'll usually have cropping text. 
+</div>
+
+@{
+  // overlay numbers to show the real length
+  //             1234567890     123456    789012
+  var sample1 = "We love Tokyo, Z&uuml;rich &amp; M&uuml;nchen";
+  var realLength = 22;
+  var length1a = 14;
+  var length1b = 15;
+}
+
+<h2>Example Text</h2>
+Original which visually has @realLength characters:
+
+<ul>
+    <li>Unencoded: @sample1</li>
+    <li>As HTML: @Html.Raw(sample1)</li>
+</ul>
+
+
+<h2>Word-Split Problems</h2>
+<div>
+    This demonstrates how strings are cut off in the middle of words if we don't use razor blade. It also breaks html entities like &amp;amp; (the &amp; character) or umlauts because ü = &uuml;.
+</div>
+
+<table border="1">
+    <tr>
+        <th></th>
+        <th colspan="2"><em>C# Substring</em></th>
+        <th colspan="2"><em>Razor Blade</em></th>
+    </tr>
+    <tr>
+        <th>Length</th>
+        <th>C# Substring</th>
+        <th>C# dot-dot-dot</th>
+        <th>Text.Crop(...)</th>
+        <th>Text.Ellipsis(...)</th>
+    </tr>
+    @for(var len = 3; len <= 32; len++) {
+        <tr>
+            <td>@len</td>
+            <td>@sample1.Substring(0, len)</td>
+            <td>@sample1.Substring(0, len)...</td>
+            <td>@Html.Raw(Text.Crop(sample1, len))</td>
+            <td>@Html.Raw(Text.Ellipsis(sample1, len))</td>
+        </tr>
+    }
+</table>
+
+<div>
+    but that's just the beginning :) - let's see what happens when we have things like &amp;amp; or &amp;uuml; characters...
+</div>
+
+<h2>Character-Count <em>with</em> Word-Split Problems</h2>
+
+<ol>
+
+    <li>Demo cut off at @realLength characters (should actually not cut)
+        <ul>
+            <li>C# Substring: @Html.Raw(sample1.Substring(0, realLength))</li>
+            <li>Razor Blade: @Html.Raw(Text.Crop(sample1, realLength))</li>
+        </ul>
+    </li>
+    
+    <li>Cut off with standard c# at @length1a chars
+        <ul>
+            <li>c# substring: @sample1.Substring(0, length1a)</li>
+            <li>Razor Blade: @Html.Raw(Text.Crop(sample1, length1a))</li>
+        </ul>
+    </li>
+    
+    <li>Cut off with standard c# at @length1b chars
+        <ul>
+            <li>c# substring: @sample1.Substring(0, length1b)</li>
+            <li>Razor Blade: @Html.Raw(Text.Crop(sample1, length1b))</li>
+        </ul>
+    </li>
+
+</ol>
+
+Note also that @@Text.Crop(...) doesn't split words, so even if @length1b characters would be in the middle of Tokyo, it will go back to the previous space :)
