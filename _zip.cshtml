@@ -1,0 +1,54 @@
+@using Connect.Razor.Blade;
+<div>
+    return to <a href="@Link.To()">overview</a>
+</div>
+<h1>Razor Blade Text.Zip</h1>
+<div>
+    These demos show how to Zip (clean/compress) text properly, because Razor Blade handles a lot of issues you'll usually have cleaning up text. 
+</div>
+
+@{
+  var sample1 = "This        contains multi-spaces and \t\t\t tabs";
+  var sample2 = "This has \n  \n line-breaks";
+  var samples = new string[] {
+    sample1,
+    sample2
+  };
+}
+
+<h2>Example Text</h2>
+Original which visually has unnecessary/problem characters:
+
+<ul>
+  @foreach(var s in samples) {
+    <li>Raw: '@Html.Raw(ShowHiddenStuff(s))'</li>
+  }
+</ul>
+
+<h2>Correct and incorrect Character Counts</h2>
+
+<table border="1">
+    <tr>
+        <th>Html output (not showing problem-characters)</th>
+        <th>Whitespace output showing the problems</th>
+        <th>Value.Length</th>
+        <th>Text.Zip(...).Length</th>
+    </tr>
+    @foreach(var s in samples) {
+      <tr>
+        <td>@s </td>
+        <td style="white-space: pre-wrap;">@s</td>
+        <td>@s.Length </td>
+        <td>@Text.Zip(s).Length</td>
+      </tr>
+    }
+</table>
+
+@functions{
+  private string ShowHiddenStuff(string original) {
+    return original
+      .Replace("\n", "\\n")
+      .Replace(" ", "&nbsp;")
+      .Replace("\t", "-&gt;");
+  }
+}

@@ -1,16 +1,17 @@
 @using Connect.Razor.Blade;
-<h1>Razor Blade Crop and Ellipsis</h1>
+<div>
+    return to <a href="@Link.To()">overview</a>
+</div>
+<h1>Razor Blade Text.Crop and Text.Ellipsis</h1>
 <div>
     These demos show how to crop text properly, because Razor Blade handles a lot of issues you'll usually have cropping text. 
 </div>
 
 @{
   // overlay numbers to show the real length
-  //             1234567890     123456    789012
+  //             12345678901234567     890123    456     78901
   var sample1 = "We love Tokyo, Z&uuml;rich &amp; M&uuml;nchen";
-  var realLength = 22;
-  var length1a = 14;
-  var length1b = 15;
+  var realLength = 31;
 }
 
 <h2>Example Text</h2>
@@ -40,7 +41,7 @@ Original which visually has @realLength characters:
         <th>Text.Crop(...)</th>
         <th>Text.Ellipsis(...)</th>
     </tr>
-    @for(var len = 3; len <= 32; len++) {
+    @for(var len = 1; len <= 32; len++) {
         <tr>
             <td>@len</td>
             <td>@sample1.Substring(0, len)</td>
@@ -51,35 +52,3 @@ Original which visually has @realLength characters:
     }
 </table>
 
-<div>
-    but that's just the beginning :) - let's see what happens when we have things like &amp;amp; or &amp;uuml; characters...
-</div>
-
-<h2>Character-Count <em>with</em> Word-Split Problems</h2>
-
-<ol>
-
-    <li>Demo cut off at @realLength characters (should actually not cut)
-        <ul>
-            <li>C# Substring: @Html.Raw(sample1.Substring(0, realLength))</li>
-            <li>Razor Blade: @Html.Raw(Text.Crop(sample1, realLength))</li>
-        </ul>
-    </li>
-    
-    <li>Cut off with standard c# at @length1a chars
-        <ul>
-            <li>c# substring: @sample1.Substring(0, length1a)</li>
-            <li>Razor Blade: @Html.Raw(Text.Crop(sample1, length1a))</li>
-        </ul>
-    </li>
-    
-    <li>Cut off with standard c# at @length1b chars
-        <ul>
-            <li>c# substring: @sample1.Substring(0, length1b)</li>
-            <li>Razor Blade: @Html.Raw(Text.Crop(sample1, length1b))</li>
-        </ul>
-    </li>
-
-</ol>
-
-Note also that @@Text.Crop(...) doesn't split words, so even if @length1b characters would be in the middle of Tokyo, it will go back to the previous space :)
