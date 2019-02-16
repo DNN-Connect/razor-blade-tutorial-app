@@ -1,0 +1,64 @@
+@using Connect.Razor.Blade;
+<div>
+    return to <a href="@Link.To()">overview</a>
+</div>
+<h1>Razor Blade Text.Has</h1>
+<div>
+    These demos show how to really check if a variable has text using Text.Has. This combines null-checks, empty checks, empty-html-nbsp-checks and more. 
+</div>
+
+
+<h2>Examples</h2>
+<table class="demo">
+  <tr>
+    <th>Test</th>
+    <th>Code</th>
+    <th>Result</th>
+  </tr>
+  <tr>
+    <td>Null value </td>
+    <td>Text.Has(null)</td>
+    <td>@Text.Has(null)</td>
+  </tr>
+  <tr>
+    <td>Just spaces </td>
+    <td>Text.Has("    ")</td>
+    <td>@Text.Has("    ")</td></tr>
+  <tr>
+    <td>text with only line breaks </td>
+    <td>Text.Has("\n\n")</td>
+    <td>@Text.Has("\n\n")</td>
+  </tr>
+  <tr>
+    <td>text with tabs, whitespaces and line breaks </td>
+    <td>Text.Has("\n\t  \n")</td>
+    <td>@Text.Has("\n\t  \n")</td>
+  </tr>
+  <tr>
+    <td>text with only nbsp characters </td>
+    <td>Text.Has("&amp;nbsp; &amp;nbsp;")</td>
+    <td>@Text.Has("&nbsp; &nbsp;")</td>
+  </tr>
+  <tr>
+    <td>text with char-code of nbsp characters </td>
+    <td>Text.Has("&#35;160;")</td>
+    <td>@Text.Has("&#160;")</td>
+  </tr>
+  <tr>
+    <td>real text </td>
+    <td>Text.Has("real text")</td>
+    <td>@Text.Has("real text")</td>
+  </tr>
+  <tr>
+    <td>Real text with nbps etc.</td>
+    <td>Text.Has("real\n text &amp;nbsp;")</td>
+    <td>@Text.Has("real\n text &nbsp;")</td>
+  </tr>
+</table>
+
+
+<style>
+  table.demo td {
+    white-space: pre-wrap;
+  }
+</style>
