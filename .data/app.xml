@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
-<SexyContent FileVersion="07.00.00" MinimumRequiredVersion="07.00.00" ModuleVersion="09.32.01" ExportDate="2019-02-17T08:40:18.3232843+01:00">
+<SexyContent FileVersion="07.00.00" MinimumRequiredVersion="07.00.00" ModuleVersion="09.32.01" ExportDate="2019-02-17T21:55:58.1868794+01:00">
   <Header>
     <App Guid="2cce15fd-4fe7-4f6b-ae3d-4814f5ed03b7" />
     <Language Default="en-US" />
@@ -18,10 +18,39 @@
   </AttributeSets>
   <Entities>
     <Entity AssignmentObjectType="App" AttributeSetStaticName="2SexyContent-App" AttributeSetName="2SexyContent-App" EntityGUID="a9cc4848-4140-4852-bde2-5dc9e1c7efa8" KeyNumber="128">
-      <Value Key="DisplayName" Value="Tutorial Razor Blade" Type="String" />
-      <Value Key="Folder" Value="Tutorial Razor Blade" Type="String" />
-      <Value Key="OriginalId" Value="" Type="String" />
-      <Value Key="Version" Value="00.00.01" Type="String" />
+      <Value Key="AllowRazorTemplates" Value="True" Type="Boolean">
+        <Dimension DimensionID="112" ReadOnly="false" />
+      </Value>
+      <Value Key="AllowTokenTemplates" Value="True" Type="Boolean">
+        <Dimension DimensionID="112" ReadOnly="false" />
+      </Value>
+      <Value Key="Description" Value="" Type="String">
+        <Dimension DimensionID="112" ReadOnly="false" />
+      </Value>
+      <Value Key="DisplayName" Value="Tutorial Razor Blade" Type="String">
+        <Dimension DimensionID="112" ReadOnly="false" />
+      </Value>
+      <Value Key="Folder" Value="Tutorial Razor Blade" Type="String">
+        <Dimension DimensionID="112" ReadOnly="false" />
+      </Value>
+      <Value Key="Hidden" Value="False" Type="Boolean">
+        <Dimension DimensionID="112" ReadOnly="false" />
+      </Value>
+      <Value Key="OriginalId" Value="" Type="String">
+        <Dimension DimensionID="112" ReadOnly="false" />
+      </Value>
+      <Value Key="RequiredDnnVersion" Value="07.02.00" Type="String">
+        <Dimension DimensionID="112" ReadOnly="false" />
+      </Value>
+      <Value Key="RequiredVersion" Value="08.03.00" Type="String">
+        <Dimension DimensionID="112" ReadOnly="false" />
+      </Value>
+      <Value Key="SupportsAjaxReload" Value="False" Type="Boolean">
+        <Dimension DimensionID="112" ReadOnly="false" />
+      </Value>
+      <Value Key="Version" Value="01.00.00" Type="String">
+        <Dimension DimensionID="112" ReadOnly="false" />
+      </Value>
     </Entity>
     <Entity AssignmentObjectType="App" AttributeSetStaticName="App-Settings" AttributeSetName="App-Settings" EntityGUID="c01e2163-9b08-45c3-83ab-f12faed91528" KeyNumber="128" />
     <Entity AssignmentObjectType="App" AttributeSetStaticName="App-Resources" AttributeSetName="App-Resources" EntityGUID="d4045623-dd74-436a-b3ce-9ed1468023a5" KeyNumber="128" />
@@ -227,6 +256,88 @@
         <Dimension DimensionID="112" ReadOnly="false" />
       </Value>
       <Value Key="ViewNameInUrl" Value="text-first/.*" Type="String">
+        <Dimension DimensionID="112" ReadOnly="false" />
+      </Value>
+    </Entity>
+    <Entity AssignmentObjectType="Default" AttributeSetStaticName="2SexyContent-Template" AttributeSetName="2SexyContent-Template" EntityGUID="15b46f4e-13d3-460a-8c99-8e5c2ba2b60e">
+      <Value Key="ContentTypeStaticName" Value="" Type="String">
+        <Dimension DimensionID="112" ReadOnly="false" />
+      </Value>
+      <Value Key="IsHidden" Value="False" Type="Boolean">
+        <Dimension DimensionID="112" ReadOnly="false" />
+      </Value>
+      <Value Key="ListContentTypeStaticName" Value="" Type="String">
+        <Dimension DimensionID="112" ReadOnly="false" />
+      </Value>
+      <Value Key="ListPresentationTypeStaticName" Value="" Type="String">
+        <Dimension DimensionID="112" ReadOnly="false" />
+      </Value>
+      <Value Key="Location" Value="Portal File System" Type="String">
+        <Dimension DimensionID="112" ReadOnly="false" />
+      </Value>
+      <Value Key="Name" Value="Tags Strip" Type="String">
+        <Dimension DimensionID="112" ReadOnly="false" />
+      </Value>
+      <Value Key="Path" Value="_tags-strip.cshtml" Type="String">
+        <Dimension DimensionID="112" ReadOnly="false" />
+      </Value>
+      <Value Key="PresentationTypeStaticName" Value="" Type="String">
+        <Dimension DimensionID="112" ReadOnly="false" />
+      </Value>
+      <Value Key="PublishData" Value="False" Type="Boolean">
+        <Dimension DimensionID="112" ReadOnly="false" />
+      </Value>
+      <Value Key="StreamsToPublish" Value="" Type="String">
+        <Dimension DimensionID="112" ReadOnly="false" />
+      </Value>
+      <Value Key="Type" Value="C# Razor" Type="String">
+        <Dimension DimensionID="112" ReadOnly="false" />
+      </Value>
+      <Value Key="UseForList" Value="False" Type="Boolean">
+        <Dimension DimensionID="112" ReadOnly="false" />
+      </Value>
+      <Value Key="ViewNameInUrl" Value="tags-strip/.*" Type="String">
+        <Dimension DimensionID="112" ReadOnly="false" />
+      </Value>
+    </Entity>
+    <Entity AssignmentObjectType="Default" AttributeSetStaticName="2SexyContent-Template" AttributeSetName="2SexyContent-Template" EntityGUID="c6b84810-a669-4bb2-a013-3e3116731c63">
+      <Value Key="ContentTypeStaticName" Value="" Type="String">
+        <Dimension DimensionID="112" ReadOnly="false" />
+      </Value>
+      <Value Key="IsHidden" Value="False" Type="Boolean">
+        <Dimension DimensionID="112" ReadOnly="false" />
+      </Value>
+      <Value Key="ListContentTypeStaticName" Value="" Type="String">
+        <Dimension DimensionID="112" ReadOnly="false" />
+      </Value>
+      <Value Key="ListPresentationTypeStaticName" Value="" Type="String">
+        <Dimension DimensionID="112" ReadOnly="false" />
+      </Value>
+      <Value Key="Location" Value="Portal File System" Type="String">
+        <Dimension DimensionID="112" ReadOnly="false" />
+      </Value>
+      <Value Key="Name" Value="Tags BR" Type="String">
+        <Dimension DimensionID="112" ReadOnly="false" />
+      </Value>
+      <Value Key="Path" Value="_tags-br.cshtml" Type="String">
+        <Dimension DimensionID="112" ReadOnly="false" />
+      </Value>
+      <Value Key="PresentationTypeStaticName" Value="" Type="String">
+        <Dimension DimensionID="112" ReadOnly="false" />
+      </Value>
+      <Value Key="PublishData" Value="False" Type="Boolean">
+        <Dimension DimensionID="112" ReadOnly="false" />
+      </Value>
+      <Value Key="StreamsToPublish" Value="" Type="String">
+        <Dimension DimensionID="112" ReadOnly="false" />
+      </Value>
+      <Value Key="Type" Value="C# Razor" Type="String">
+        <Dimension DimensionID="112" ReadOnly="false" />
+      </Value>
+      <Value Key="UseForList" Value="False" Type="Boolean">
+        <Dimension DimensionID="112" ReadOnly="false" />
+      </Value>
+      <Value Key="ViewNameInUrl" Value="tags-br/.*" Type="String">
         <Dimension DimensionID="112" ReadOnly="false" />
       </Value>
     </Entity>
