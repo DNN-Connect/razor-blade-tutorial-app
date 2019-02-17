@@ -11,7 +11,7 @@
     var val1 = "John";
     var val2 = "Michael";
     var spc = "   ";
-    var fallback = "unknown";
+    var fallback = "please-enter-name";
     var nbsp = "&nbsp;";
 }
 
@@ -43,11 +43,11 @@
     <li>Text.First(null, @nbsp, @val1, @val2, @fallback): @Text.First(null, nbsp, val1, val2, fallback)</li>
     <li>Text.First(null, @nbsp, @val1, @val2, @fallback, false): @Text.First(null, nbsp, val1, val2, fallback, false)</li>
     <li>
-        Text.First(new string[] { null, null, @nbsp, @val1, @val2, @spc, @fallback}):
+        Text.First(new string[] { null, null, @nbsp, @val1, @val2, "@spc", @fallback}):
         @Text.First(new string[] { null, null, nbsp, val1, val2, spc, fallback})
     </li>
     <li>
-        Text.First(new string[] { null, null, @nbsp, @val1, @val2, @spc, @fallback}, false):
+        Text.First(new string[] { null, null, @nbsp, @val1, @val2, "@spc", @fallback}, false):
         @Text.First(new string[] { null, null, nbsp, val1, val2, spc, fallback}, false)
     </li>
 </ol>
