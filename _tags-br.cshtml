@@ -1,0 +1,19 @@
+@using Connect.Razor.Blade;
+<div>
+    return to <a href="@Link.To()">overview</a>
+</div>
+<h1>Razor Blade Tags BR/NewLine Conversions</h1>
+<div>
+    These demos show how to convert BR tags to spaces, New-Lines or New-Lines to BRs. 
+</div>
+
+@{
+    var val1 = "<h1>Introduction</h1><p>Welcome to this blog post</p><hr><p>beginning with xyz we'll tell you more</p>";
+}
+
+<h2>Simple example</h2>
+<h3>Original</h3>
+@val1
+
+<h3>After Strip</h3>
+@Tags.Strip(val1)

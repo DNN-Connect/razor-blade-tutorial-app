@@ -1,0 +1,29 @@
+@using Connect.Razor.Blade;
+<div>
+    return to <a href="@Link.To()">overview</a>
+</div>
+<h1>Razor Blade Tags.Strip</h1>
+<div>
+    These demos show how to strip all html from a string. You often need this in combination with <a href='@Link.To(parameters: "text-crop=true")'>crop or ellipsis</a> to create teasers.
+</div>
+
+@{
+    var val1 = "<h1>Introduction</h1><p>Welcome to this blog post</p><hr><p>beginning with xyz we'll tell you more</p>";
+    var cropLen = 50;
+}
+
+<h2>Simple example</h2>
+<h3>Original</h3>
+@val1
+
+<br>
+<em>which if cropped at @cropLen would be really messy</em>
+<br>
+
+@val1.Substring(0, cropLen)
+
+<h3>After Strip</h3>
+@Tags.Strip(val1)
+
+<h3>Usually you will then combine with crop or ellipsis</h3>
+@Html.Raw(Text.Ellipsis(Tags.Strip(val1), cropLen))
