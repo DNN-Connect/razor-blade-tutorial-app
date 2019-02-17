@@ -1,0 +1,53 @@
+@using Connect.Razor.Blade;
+<div>
+    return to <a href="@Link.To()">overview</a>
+</div>
+<h1>Razor Blade Text.First</h1>
+<div>
+    These demos show how to get the first <em>real</em> text of a series of values. Basically it will ignore nulls, empty texts, space-strings and even combinations containing empty lines, html-nbsps and more. 
+</div>
+
+@{
+    var val1 = "John";
+    var val2 = "Michael";
+    var spc = "   ";
+    var fallback = "unknown";
+    var nbsp = "&nbsp;";
+}
+
+<h2>Demos</h2>
+
+<h3>Basic 2-Value Demos</h3>
+<p>
+    Note that the code you see on the output page is so you understand what it's running, sometimes it contains comments or something which of course are not in the real code.
+</p>
+<ol>
+    <li>Text.First(null, @val1): @Text.First(null, val1)</li>
+    <li>Text.First(null, null): @Text.First(null, null)</li>
+    <li>Text.First(@val1, @val2): @Text.First(val1, val2)</li>
+    <li>Text.First("@spc" = 3 spaces, @val1): @Text.First(spc, val1)</li>
+    <li>Text.First(null, @fallback): @Text.First(null, fallback)</li>
+    <li>Text.First(@nbsp, @fallback): @Text.First(nbsp, fallback)</li>
+    <li>Text.First(@nbsp, @fallback, false): @Text.First(nbsp, fallback, false) <br>
+        "false" means don't treat html-whitespace as whitespace, so @nbsp will be treated as a real value
+    </li>
+</ol>
+
+<h3>3-5 Value Demos</h3>
+<p>
+    Text.First has overloads (multiple signatures) for up to 5 values, and another one accepting an array of string objects so you can even use it for 10 values if you really need it. 
+</p>
+<ol>
+    <li>Text.First(null, @val1, @fallback): @Text.First(null, val1, fallback)</li>
+    <li>Text.First(null, @val1, @val2, @fallback): @Text.First(null, val1, val2, fallback)</li>
+    <li>Text.First(null, @nbsp, @val1, @val2, @fallback): @Text.First(null, nbsp, val1, val2, fallback)</li>
+    <li>Text.First(null, @nbsp, @val1, @val2, @fallback, false): @Text.First(null, nbsp, val1, val2, fallback, false)</li>
+    <li>
+        Text.First(new string[] { null, null, @nbsp, @val1, @val2, @spc, @fallback}):
+        @Text.First(new string[] { null, null, nbsp, val1, val2, spc, fallback})
+    </li>
+    <li>
+        Text.First(new string[] { null, null, @nbsp, @val1, @val2, @spc, @fallback}, false):
+        @Text.First(new string[] { null, null, nbsp, val1, val2, spc, fallback}, false)
+    </li>
+</ol>

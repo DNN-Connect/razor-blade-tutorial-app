@@ -52,12 +52,6 @@
     <td>@Text.Has("&#160;", false)</td>
   </tr>
   <tr>
-    <td>text br lines </td>
-    <td>Text.Has("&lt;br&gt;")</td>
-    <td>@Text.Has("<br>")</td>
-    <td>@Text.Has("<br>", false)</td>
-  </tr>
-  <tr>
     <td>real text </td>
     <td>Text.Has("real text")</td>
     <td>@Text.Has("real text")</td>
@@ -79,6 +73,8 @@
   <li>If you want to ignore BRs, combine it with <a href='@Link.To(parameters: "tags=true")'>Tags.Br2Nl(...)</a> </li>
   <li>...resulting in: @Text.Has(Tags.Br2Nl("<br>"))</li>
 </ul>
+
+
 
 <style>
   table.demo td {

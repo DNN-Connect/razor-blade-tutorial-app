@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
-<SexyContent FileVersion="07.00.00" MinimumRequiredVersion="07.00.00" ModuleVersion="09.32.01" ExportDate="2019-02-16T11:46:43.8674788+01:00">
+<SexyContent FileVersion="07.00.00" MinimumRequiredVersion="07.00.00" ModuleVersion="09.32.01" ExportDate="2019-02-17T08:40:18.3232843+01:00">
   <Header>
     <App Guid="2cce15fd-4fe7-4f6b-ae3d-4814f5ed03b7" />
     <Language Default="en-US" />
@@ -85,7 +85,7 @@
       <Value Key="Name" Value="Crop and Ellipsis" Type="String">
         <Dimension DimensionID="112" ReadOnly="false" />
       </Value>
-      <Value Key="Path" Value="_crop-ellipsis.cshtml" Type="String">
+      <Value Key="Path" Value="_text-crop-ellipsis.cshtml" Type="String">
         <Dimension DimensionID="112" ReadOnly="false" />
       </Value>
       <Value Key="PresentationTypeStaticName" Value="" Type="String">
@@ -103,7 +103,7 @@
       <Value Key="UseForList" Value="False" Type="Boolean">
         <Dimension DimensionID="112" ReadOnly="false" />
       </Value>
-      <Value Key="ViewNameInUrl" Value="ellipsis/.*" Type="String">
+      <Value Key="ViewNameInUrl" Value="text-crop/.*" Type="String">
         <Dimension DimensionID="112" ReadOnly="false" />
       </Value>
     </Entity>
@@ -126,7 +126,7 @@
       <Value Key="Name" Value="Zip" Type="String">
         <Dimension DimensionID="112" ReadOnly="false" />
       </Value>
-      <Value Key="Path" Value="_zip.cshtml" Type="String">
+      <Value Key="Path" Value="_text-zip.cshtml" Type="String">
         <Dimension DimensionID="112" ReadOnly="false" />
       </Value>
       <Value Key="PresentationTypeStaticName" Value="" Type="String">
@@ -144,7 +144,7 @@
       <Value Key="UseForList" Value="False" Type="Boolean">
         <Dimension DimensionID="112" ReadOnly="false" />
       </Value>
-      <Value Key="ViewNameInUrl" Value="zip/.*" Type="String">
+      <Value Key="ViewNameInUrl" Value="text-zip/.*" Type="String">
         <Dimension DimensionID="112" ReadOnly="false" />
       </Value>
     </Entity>
@@ -167,7 +167,7 @@
       <Value Key="Name" Value="HasText" Type="String">
         <Dimension DimensionID="112" ReadOnly="false" />
       </Value>
-      <Value Key="Path" Value="_hastext.cshtml" Type="String">
+      <Value Key="Path" Value="_text-has.cshtml" Type="String">
         <Dimension DimensionID="112" ReadOnly="false" />
       </Value>
       <Value Key="PresentationTypeStaticName" Value="" Type="String">
@@ -185,7 +185,48 @@
       <Value Key="UseForList" Value="False" Type="Boolean">
         <Dimension DimensionID="112" ReadOnly="false" />
       </Value>
-      <Value Key="ViewNameInUrl" Value="hastext/.*" Type="String">
+      <Value Key="ViewNameInUrl" Value="text-has/.*" Type="String">
+        <Dimension DimensionID="112" ReadOnly="false" />
+      </Value>
+    </Entity>
+    <Entity AssignmentObjectType="Default" AttributeSetStaticName="2SexyContent-Template" AttributeSetName="2SexyContent-Template" EntityGUID="dd66e9b6-a52a-4008-9a5a-6a557ead37d6">
+      <Value Key="ContentTypeStaticName" Value="" Type="String">
+        <Dimension DimensionID="112" ReadOnly="false" />
+      </Value>
+      <Value Key="IsHidden" Value="False" Type="Boolean">
+        <Dimension DimensionID="112" ReadOnly="false" />
+      </Value>
+      <Value Key="ListContentTypeStaticName" Value="" Type="String">
+        <Dimension DimensionID="112" ReadOnly="false" />
+      </Value>
+      <Value Key="ListPresentationTypeStaticName" Value="" Type="String">
+        <Dimension DimensionID="112" ReadOnly="false" />
+      </Value>
+      <Value Key="Location" Value="Portal File System" Type="String">
+        <Dimension DimensionID="112" ReadOnly="false" />
+      </Value>
+      <Value Key="Name" Value="First Text" Type="String">
+        <Dimension DimensionID="112" ReadOnly="false" />
+      </Value>
+      <Value Key="Path" Value="_text-first.cshtml" Type="String">
+        <Dimension DimensionID="112" ReadOnly="false" />
+      </Value>
+      <Value Key="PresentationTypeStaticName" Value="" Type="String">
+        <Dimension DimensionID="112" ReadOnly="false" />
+      </Value>
+      <Value Key="PublishData" Value="False" Type="Boolean">
+        <Dimension DimensionID="112" ReadOnly="false" />
+      </Value>
+      <Value Key="StreamsToPublish" Value="" Type="String">
+        <Dimension DimensionID="112" ReadOnly="false" />
+      </Value>
+      <Value Key="Type" Value="C# Razor" Type="String">
+        <Dimension DimensionID="112" ReadOnly="false" />
+      </Value>
+      <Value Key="UseForList" Value="False" Type="Boolean">
+        <Dimension DimensionID="112" ReadOnly="false" />
+      </Value>
+      <Value Key="ViewNameInUrl" Value="text-first/.*" Type="String">
         <Dimension DimensionID="112" ReadOnly="false" />
       </Value>
     </Entity>
