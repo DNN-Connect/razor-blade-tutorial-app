@@ -13,49 +13,72 @@
   <tr>
     <th>Test</th>
     <th>Code</th>
-    <th>Result</th>
+    <th>Result with html-ignore</th>
+    <th>...without html-ignore</th>
   </tr>
   <tr>
     <td>Null value </td>
     <td>Text.Has(null)</td>
     <td>@Text.Has(null)</td>
+    <td>@Text.Has(null, false)</td>
   </tr>
   <tr>
     <td>Just spaces </td>
     <td>Text.Has("    ")</td>
-    <td>@Text.Has("    ")</td></tr>
+    <td>@Text.Has("    ")</td>
+    <td>@Text.Has("    ", false)</td>
   <tr>
     <td>text with only line breaks </td>
     <td>Text.Has("\n\n")</td>
     <td>@Text.Has("\n\n")</td>
+    <td>@Text.Has("\n\n", false)</td>
   </tr>
   <tr>
     <td>text with tabs, whitespaces and line breaks </td>
     <td>Text.Has("\n\t  \n")</td>
     <td>@Text.Has("\n\t  \n")</td>
+    <td>@Text.Has("\n\t  \n", false)</td>
   </tr>
   <tr>
     <td>text with only nbsp characters </td>
     <td>Text.Has("&amp;nbsp; &amp;nbsp;")</td>
     <td>@Text.Has("&nbsp; &nbsp;")</td>
+    <td>@Text.Has("&nbsp; &nbsp;", false)</td>
   </tr>
   <tr>
     <td>text with char-code of nbsp characters </td>
     <td>Text.Has("&#35;160;")</td>
     <td>@Text.Has("&#160;")</td>
+    <td>@Text.Has("&#160;", false)</td>
+  </tr>
+  <tr>
+    <td>text br lines </td>
+    <td>Text.Has("&lt;br&gt;")</td>
+    <td>@Text.Has("<br>")</td>
+    <td>@Text.Has("<br>", false)</td>
   </tr>
   <tr>
     <td>real text </td>
     <td>Text.Has("real text")</td>
     <td>@Text.Has("real text")</td>
+    <td>@Text.Has("real text", false)</td>
   </tr>
   <tr>
     <td>Real text with nbps etc.</td>
     <td>Text.Has("real\n text &amp;nbsp;")</td>
     <td>@Text.Has("real\n text &nbsp;")</td>
+    <td>@Text.Has("real\n text &nbsp;", false)</td>
   </tr>
 </table>
 
+<h2>Special case: &lt;BR&gt; Whitespace</h2>
+
+<ul>
+  <li>If your string is like Text.Has("&lt;br&gt;")</li>
+  <li>...then it will return: @Text.Has("<br>")</li>
+  <li>If you want to ignore BRs, combine it with <a href='@Link.To(parameters: "tags=true")'>Tags.Br2Nl(...)</a> </li>
+  <li>...resulting in: @Text.Has(Tags.Br2Nl("<br>"))</li>
+</ul>
 
 <style>
   table.demo td {
