@@ -1,0 +1,16 @@
+@using Connect.Razor.Blade;
+<div>
+    return to <a href="@Link.To()">overview</a>
+</div>
+<h1 class="sc-element">
+    Razor Blade - Set Open-Graph Headers
+    @Edit.Toolbar(Content)
+</h1>
+
+@{
+  HtmlPage.AddOpenGraph("og:xyz", "other");
+}
+
+This page sets various open-graph headers. 
+
+Look at the resulting output-source to see the effect. 

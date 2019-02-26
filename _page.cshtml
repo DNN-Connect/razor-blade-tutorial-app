@@ -1,0 +1,20 @@
+@using Connect.Razor.Blade;
+<div>
+    return to <a href="@Link.To()">overview</a>
+</div>
+<h1 class="sc-element">
+    Razor Blade - set Title, Description and other headers
+    @Edit.Toolbar(Content)
+</h1>
+
+@{
+  HtmlPage.Title = "Title changed from the razor using Razor Blade! original: " + HtmlPage.Title;
+  HtmlPage.Description = "Learn to use Razor Blade " + HtmlPage.Description;
+  HtmlPage.Keywords = "Tutorial, Razor, Blade" + HtmlPage.Keywords;
+  HtmlPage.AddToHead("<meta xyz>");
+  HtmlPage.AddMeta("somename", "somevalue");
+}
+
+This page sets the title, description, keywords and some manual tags to the header. 
+
+Look at the resulting output-source to see the effect. 

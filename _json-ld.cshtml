@@ -1,0 +1,31 @@
+@using Connect.Razor.Blade;
+<div>
+    return to <a href="@Link.To()">overview</a>
+</div>
+<h1 class="sc-element">
+    Razor Blade - JSON LD Examples
+    @Edit.Toolbar(Content)
+</h1>
+
+@{
+  // example adding a json-ld as a string
+  HtmlPage.AddJsonLd("{ \"@context\": \"https://schema.org/\" }");
+
+  // creating a JSON-LD using an object - replicating googles example https://developers.google.com/search/docs/guides/intro-structured-data
+  var jsonLd = new JsonLdNode {
+    { "@context", "https://schema.org"},
+    { "@type", "Organization"},
+    { "url", "http://www.example.com"},
+    { "name", "Unlimited Ball Bearings Corp."},
+    { "contactPoint", new JsonLdNode {
+      {"@type", "ContactPoint"},
+      {"telephone", "+1-401-555-1212"},
+      {"contactType", "Customer service"}
+    }}
+  };
+
+  HtmlPage.AddJsonLd(jsonLd);
+}
+
+  
+This page adds 2 JSON-LD tags to the html-head. View the output source to see it.
