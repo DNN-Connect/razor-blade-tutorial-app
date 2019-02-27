@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
-<SexyContent FileVersion="07.00.00" MinimumRequiredVersion="07.00.00" ModuleVersion="09.32.01" ExportDate="2019-02-20T16:18:51.5813656+01:00">
+<SexyContent FileVersion="07.00.00" MinimumRequiredVersion="07.00.00" ModuleVersion="09.32.01" ExportDate="2019-02-27T08:08:18.9432686+01:00">
   <Header>
     <App Guid="2cce15fd-4fe7-4f6b-ae3d-4814f5ed03b7" />
     <Language Default="en-US" />
@@ -48,7 +48,7 @@
       <Value Key="SupportsAjaxReload" Value="False" Type="Boolean">
         <Dimension DimensionID="112" ReadOnly="false" />
       </Value>
-      <Value Key="Version" Value="01.00.00" Type="String">
+      <Value Key="Version" Value="01.01.00" Type="String">
         <Dimension DimensionID="112" ReadOnly="false" />
       </Value>
     </Entity>
@@ -338,6 +338,129 @@
         <Dimension DimensionID="112" ReadOnly="false" />
       </Value>
       <Value Key="ViewNameInUrl" Value="tags-br/.*" Type="String">
+        <Dimension DimensionID="112" ReadOnly="false" />
+      </Value>
+    </Entity>
+    <Entity AssignmentObjectType="Default" AttributeSetStaticName="2SexyContent-Template" AttributeSetName="2SexyContent-Template" EntityGUID="21de4a62-5402-4248-b2ee-a5428224afb6">
+      <Value Key="ContentTypeStaticName" Value="" Type="String">
+        <Dimension DimensionID="112" ReadOnly="false" />
+      </Value>
+      <Value Key="IsHidden" Value="False" Type="Boolean">
+        <Dimension DimensionID="112" ReadOnly="false" />
+      </Value>
+      <Value Key="ListContentTypeStaticName" Value="" Type="String">
+        <Dimension DimensionID="112" ReadOnly="false" />
+      </Value>
+      <Value Key="ListPresentationTypeStaticName" Value="" Type="String">
+        <Dimension DimensionID="112" ReadOnly="false" />
+      </Value>
+      <Value Key="Location" Value="Portal File System" Type="String">
+        <Dimension DimensionID="112" ReadOnly="false" />
+      </Value>
+      <Value Key="Name" Value="Page" Type="String">
+        <Dimension DimensionID="112" ReadOnly="false" />
+      </Value>
+      <Value Key="Path" Value="_page.cshtml" Type="String">
+        <Dimension DimensionID="112" ReadOnly="false" />
+      </Value>
+      <Value Key="PresentationTypeStaticName" Value="" Type="String">
+        <Dimension DimensionID="112" ReadOnly="false" />
+      </Value>
+      <Value Key="PublishData" Value="False" Type="Boolean">
+        <Dimension DimensionID="112" ReadOnly="false" />
+      </Value>
+      <Value Key="StreamsToPublish" Value="" Type="String">
+        <Dimension DimensionID="112" ReadOnly="false" />
+      </Value>
+      <Value Key="Type" Value="C# Razor" Type="String">
+        <Dimension DimensionID="112" ReadOnly="false" />
+      </Value>
+      <Value Key="UseForList" Value="False" Type="Boolean">
+        <Dimension DimensionID="112" ReadOnly="false" />
+      </Value>
+      <Value Key="ViewNameInUrl" Value="htmlpage/.*" Type="String">
+        <Dimension DimensionID="112" ReadOnly="false" />
+      </Value>
+    </Entity>
+    <Entity AssignmentObjectType="Default" AttributeSetStaticName="2SexyContent-Template" AttributeSetName="2SexyContent-Template" EntityGUID="706a9f31-c453-4724-8585-6ff6c75d2955">
+      <Value Key="ContentTypeStaticName" Value="" Type="String">
+        <Dimension DimensionID="112" ReadOnly="false" />
+      </Value>
+      <Value Key="IsHidden" Value="False" Type="Boolean">
+        <Dimension DimensionID="112" ReadOnly="false" />
+      </Value>
+      <Value Key="ListContentTypeStaticName" Value="" Type="String">
+        <Dimension DimensionID="112" ReadOnly="false" />
+      </Value>
+      <Value Key="ListPresentationTypeStaticName" Value="" Type="String">
+        <Dimension DimensionID="112" ReadOnly="false" />
+      </Value>
+      <Value Key="Location" Value="Portal File System" Type="String">
+        <Dimension DimensionID="112" ReadOnly="false" />
+      </Value>
+      <Value Key="Name" Value="Page - JSON-LD" Type="String">
+        <Dimension DimensionID="112" ReadOnly="false" />
+      </Value>
+      <Value Key="Path" Value="_json-ld.cshtml" Type="String">
+        <Dimension DimensionID="112" ReadOnly="false" />
+      </Value>
+      <Value Key="PresentationTypeStaticName" Value="" Type="String">
+        <Dimension DimensionID="112" ReadOnly="false" />
+      </Value>
+      <Value Key="PublishData" Value="False" Type="Boolean">
+        <Dimension DimensionID="112" ReadOnly="false" />
+      </Value>
+      <Value Key="StreamsToPublish" Value="" Type="String">
+        <Dimension DimensionID="112" ReadOnly="false" />
+      </Value>
+      <Value Key="Type" Value="C# Razor" Type="String">
+        <Dimension DimensionID="112" ReadOnly="false" />
+      </Value>
+      <Value Key="UseForList" Value="False" Type="Boolean">
+        <Dimension DimensionID="112" ReadOnly="false" />
+      </Value>
+      <Value Key="ViewNameInUrl" Value="jsonld/.*" Type="String">
+        <Dimension DimensionID="112" ReadOnly="false" />
+      </Value>
+    </Entity>
+    <Entity AssignmentObjectType="Default" AttributeSetStaticName="2SexyContent-Template" AttributeSetName="2SexyContent-Template" EntityGUID="6a05bb58-7a9f-4638-bdc5-1d06472ccada">
+      <Value Key="ContentTypeStaticName" Value="" Type="String">
+        <Dimension DimensionID="112" ReadOnly="false" />
+      </Value>
+      <Value Key="IsHidden" Value="False" Type="Boolean">
+        <Dimension DimensionID="112" ReadOnly="false" />
+      </Value>
+      <Value Key="ListContentTypeStaticName" Value="" Type="String">
+        <Dimension DimensionID="112" ReadOnly="false" />
+      </Value>
+      <Value Key="ListPresentationTypeStaticName" Value="" Type="String">
+        <Dimension DimensionID="112" ReadOnly="false" />
+      </Value>
+      <Value Key="Location" Value="Portal File System" Type="String">
+        <Dimension DimensionID="112" ReadOnly="false" />
+      </Value>
+      <Value Key="Name" Value="Page - Open Graph" Type="String">
+        <Dimension DimensionID="112" ReadOnly="false" />
+      </Value>
+      <Value Key="Path" Value="_open-graph.cshtml" Type="String">
+        <Dimension DimensionID="112" ReadOnly="false" />
+      </Value>
+      <Value Key="PresentationTypeStaticName" Value="" Type="String">
+        <Dimension DimensionID="112" ReadOnly="false" />
+      </Value>
+      <Value Key="PublishData" Value="False" Type="Boolean">
+        <Dimension DimensionID="112" ReadOnly="false" />
+      </Value>
+      <Value Key="StreamsToPublish" Value="" Type="String">
+        <Dimension DimensionID="112" ReadOnly="false" />
+      </Value>
+      <Value Key="Type" Value="C# Razor" Type="String">
+        <Dimension DimensionID="112" ReadOnly="false" />
+      </Value>
+      <Value Key="UseForList" Value="False" Type="Boolean">
+        <Dimension DimensionID="112" ReadOnly="false" />
+      </Value>
+      <Value Key="ViewNameInUrl" Value="opengraph/.*" Type="String">
         <Dimension DimensionID="112" ReadOnly="false" />
       </Value>
     </Entity>

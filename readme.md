@@ -1,6 +1,6 @@
 <img src="app-icon.png" align="right">
 
-# Razor Blade Tutorial App
+# Razor Blade Tutorial App for v1.1
 
 This is a 2sxc app to quickly learn/discover what _[Razor Blade](https://github.com/DNN-Connect/razor-blade)_ can do for you and see the various syntax examples.
 
